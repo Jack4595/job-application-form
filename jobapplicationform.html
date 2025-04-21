@@ -11,10 +11,10 @@
         <form>
             
             <label for="name">Full Name:</label> 
-            <input id="name" type="text" placeholder="Enter your name">
+            <input id="name" required type="text" placeholder="Enter your name">
             
             <label for-"email">Email:</label>
-            <input id="email" type="email" placeholder="Enter your email">
+            <input id="email" required type="email" placeholder="Enter your email">
             
             <label for="position">Position:</label>
             <select id="position">
@@ -28,13 +28,18 @@
 
             <fieldset class="radio-group">
                 <legend>Avalability</legend>
-                <label>
-                    <input type="radio" name="avalability" value="full-time"> Full-Time
-                </label>
-                <label>
-                    <input type="radio" name="avalability" value="part-time"> Part-Time
-                </label>
+
+                <input type="radio" id="full-time" name="availability" value="full-time">
+                <label for="full-time">Full-Time</label>
+
+                <input type="radio" id="part-time" name="availability" value="part-time">
+                <label for="part-time">Part-Time</label> 
             </fieldset>
+
+            <label for="questions">Why do you want this job?</label>
+            <textarea id="message" name="message" rows="5" cols="45" placeholder="Write your motivation" required></textarea>
+
+            <button type="submit">Submit Application</button>
         </form>
     </div>
 
