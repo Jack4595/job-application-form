@@ -1,14 +1,65 @@
+/* === General Reset & Layout === */
+body {
+  background-color: #f7f9fc;
+  font-family: 'Segoe UI', sans-serif;
+  padding: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  padding: 20px;
+  background-color: white;
+  border-radius: 12px;
+  margin: 30px auto;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: 600;
+  color: #333;
+}
+
+/* === Inputs === */
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
 input:focus,
 textarea:focus {
-  border-color: #007BFF;
+  border-color: #4A90E2;
   outline: none;
-  box-shadow: 0 0 3px #007BFF;
+  box-shadow: 0 0 4px rgba(74, 154, 226, 0.6);
 }
 
 input:invalid,
 select:invalid,
 textarea:invalid {
-  border-color: red 
+  border-color: red;
+}
+
+input:invalid:required,
+select:invalid:required,
+textarea:invalid:required {
+  border-color: red;
 }
 
 input:valid,
@@ -17,22 +68,71 @@ textarea:valid {
   border-color: green;
 }
 
-button:hover {
-  background-color: #ADD8E6
+input:first-of-type {
+  border-color: #4A90E2;
+}
+
+input:-webkit-autofill {
+  box-shadow: 0 0 0px 1000px white inset !important;
+  -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+  border: 1.5px solid #28a745 !important;
+}
+
+/* === Select === */
+select {
+  transition: all 0.2s ease;
+  background-color: white;
+}
+
+/* === Radio Button Group === */
+.radio-group {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 20px;
+  background-color: #fdfdfd;
+}
+
+.radio-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.radio-option label {
+  margin: 0;
 }
 
 .radio-group input[type="radio"]:checked {
-  border-color: #007BFF;
-  background-color: #ADD8E6;
-  box-shadow: 0 0 4px #007BFF;
+  border-color: #4A90E2;
+  background-color: #e6f0ff;
+  box-shadow: 0 0 4px rgba(74, 144, 226, 0.5);
 }
 
 .radio-group input[type="radio"]:checked + label {
-  color: #007BFF;
-  
+  color: #4A90E2;
 }
 
-input:nth-child(1) {
-  border: 2px dashed #ADD8E6;
-  background-color: #f3eaff;
+/* === Textarea === */
+/* Already styled above with shared input styles */
+
+/* === Submit Button === */
+button[type="submit"] {
+  background-color: #4A90E2;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #357ABD;
+  transform: translateY(-3px);
 }

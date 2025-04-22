@@ -4,20 +4,20 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job Application Form</title>
-    <link href="styles.css" rel="stylesheet"/>
+    <link href="styles.css" rel="stylesheet" />
 </head>
 <body>
     <div class="container">
+        <h1>Job Application Form</h1>
         <form>
-            
-            <label for="name">Full Name:</label> 
+            <label for="name">Full Name:</label>
             <input id="name" required type="text" placeholder="Enter your name">
-            
+
             <label for-"email">Email:</label>
             <input id="email" required type="email" placeholder="Enter your email">
-            
+
             <label for="position">Position:</label>
-            <select id="position">
+            <select id="position" required>
                 <option value="">Select a position</option>
                 <option value="frontend">Frontend Developer</option>
                 <option value="backend">Backend Developer</option>
@@ -29,11 +29,15 @@
             <fieldset class="radio-group">
                 <legend>Avalability</legend>
 
-                <input type="radio" id="full-time" name="availability" value="full-time">
-                <label for="full-time">Full-Time</label>
+                <div class="radio-option">
+                    <input type="radio" id="full-time" name="availability" value="full-time">
+                    <label for="full-time">Full-Time</label>
+                </div>
 
-                <input type="radio" id="part-time" name="availability" value="part-time">
-                <label for="part-time">Part-Time</label> 
+                <div class="radio-option">
+                    <input type="radio" id="part-time" name="availability" value="part-time">
+                    <label for="part-time">Part-Time</label>
+                </div>
             </fieldset>
 
             <label for="questions">Why do you want this job?</label>
@@ -42,6 +46,5 @@
             <button type="submit">Submit Application</button>
         </form>
     </div>
-
 </body>
 </html>
